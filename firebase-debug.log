@@ -1,0 +1,24 @@
+[debug] [2024-04-16T16:32:47.344Z] ----------------------------------------------------------------------
+[debug] [2024-04-16T16:32:47.345Z] Command:       /usr/local/bin/node /usr/local/bin/firebase projects:create
+[debug] [2024-04-16T16:32:47.345Z] CLI Version:   13.7.2
+[debug] [2024-04-16T16:32:47.345Z] Platform:      darwin
+[debug] [2024-04-16T16:32:47.346Z] Node Version:  v18.17.1
+[debug] [2024-04-16T16:32:47.346Z] Time:          Tue Apr 16 2024 22:02:47 GMT+0530 (India Standard Time)
+[debug] [2024-04-16T16:32:47.347Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-16T16:32:47.349Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-16T16:32:47.349Z] > authorizing via signed-in user (rakeshmm6697@gmail.com)
+[debug] [2024-04-16T16:33:04.242Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-04-16T16:33:04.243Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"rakeshmm6696","name":"medium-blog"}
+[debug] [2024-04-16T16:33:05.842Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2024-04-16T16:33:05.843Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.9104807400613794738"}
+[debug] [2024-04-16T16:33:05.844Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.9104807400613794738 [none]
+[debug] [2024-04-16T16:33:07.469Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.9104807400613794738 200
+[debug] [2024-04-16T16:33:07.470Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.9104807400613794738 {"name":"operations/cp.9104807400613794738","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","ready":true},"done":true,"error":{"code":9,"message":"Callers must accept Terms of Service","details":[{"@type":"type.googleapis.com/google.rpc.PreconditionFailure","violations":[{"type":"TOS","subject":"cloud","description":"Callers must accept Terms of Service"}]}]}}
+[debug] [2024-04-16T16:33:07.578Z] FirebaseError: Callers must accept Terms of Service
+    at OperationPoller.poll (/usr/local/lib/node_modules/firebase-tools/lib/operation-poller.js:24:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createCloudProject (/usr/local/lib/node_modules/firebase-tools/lib/management/projects.js:186:29)
+    at async createFirebaseProjectAndLog (/usr/local/lib/node_modules/firebase-tools/lib/management/projects.js:45:9)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
